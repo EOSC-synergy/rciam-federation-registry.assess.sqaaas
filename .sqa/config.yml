@@ -1,0 +1,61 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/rciam/rciam-federation-registry:
+      branch: master
+      repo: https://github.com/rciam/rciam-federation-registry
+    github.com/rciam/rciam-federation-registry-docs:
+      branch: master
+      repo: https://github.com/rciam/rciam-federation-registry-docs
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/rciam/rciam-federation-registry git:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-thistle-baboon.sh
+        container: qc.acc_cheeky-cerise-mule
+  QC.Doc:
+    repos:
+      github.com/rciam/rciam-federation-registry-docs find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-myrtle-chihuahua.sh
+        container: qc.doc_woozy-cardinal-drever
+      github.com/rciam/rciam-federation-registry-docs git:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-brass-newfoundland.sh
+        container: qc.doc_ready-brass-tarantula
+      github.com/rciam/rciam-federation-registry-docs markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-rust-chihuahua.sh
+        container: qc.doc_messy-malachite-woodpecker
+  QC.Lic:
+    repos:
+      github.com/rciam/rciam-federation-registry licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-thistle-lemming.sh
+        container: qc.lic_greasy-azure-mongoose
+  QC.Met:
+    repos:
+      github.com/rciam/rciam-federation-registry validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-green-wrasse.sh
+        container: qc.met_shaggy-scarlet-frigatebird
+  QC.Sty:
+    repos:
+      github.com/rciam/rciam-federation-registry jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-malachite-dollar.sh
+        container: qc.sty_greasy-ecru-leopard
+  QC.Ver:
+    repos:
+      github.com/rciam/rciam-federation-registry get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-red-tang.sh
+        container: qc.ver_wheezy-apricot-cheetah
+timeout: 5400
