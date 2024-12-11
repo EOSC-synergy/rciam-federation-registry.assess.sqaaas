@@ -7,9 +7,6 @@ config:
     github.com/rciam/rciam-federation-registry:
       branch: master
       repo: https://github.com/rciam/rciam-federation-registry
-    github.com/rciam/rciam-federation-registry-docs:
-      branch: master
-      repo: https://github.com/rciam/rciam-federation-registry-docs
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
@@ -18,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-thistle-baboon.sh
-        container: qc.acc_cheeky-cerise-mule
+        - /usr/bin/env sh .sqa/script.woolly-eggplant-havanese.sh
+        container: qc.acc_wimpy-firebrick-eel
   QC.Doc:
     repos:
-      github.com/rciam/rciam-federation-registry-docs find_doc_files.py:
+      github.com/rciam/rciam-federation-registry find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-myrtle-chihuahua.sh
-        container: qc.doc_woozy-cardinal-drever
-      github.com/rciam/rciam-federation-registry-docs git:
+        - /usr/bin/env sh .sqa/script.snippy-ivory-audemer.sh
+        container: qc.doc_beady-eggplant-lobster
+      github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-brass-newfoundland.sh
-        container: qc.doc_ready-brass-tarantula
-      github.com/rciam/rciam-federation-registry-docs markdownlint:
+        - /usr/bin/env sh .sqa/script.craggy-cardinal-bloodhound.sh
+        container: qc.doc_clammy-violet-spider
+      github.com/rciam/rciam-federation-registry markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-rust-chihuahua.sh
-        container: qc.doc_messy-malachite-woodpecker
+        - /usr/bin/env sh .sqa/script.wimpy-smalt-dane.sh
+        container: qc.doc_stuffy-tomato-tortoise
   QC.Lic:
     repos:
       github.com/rciam/rciam-federation-registry licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-thistle-lemming.sh
-        container: qc.lic_greasy-azure-mongoose
+        - /usr/bin/env sh .sqa/script.muzzy-blue-audemer.sh
+        container: qc.lic_shaggy-ecru-bobcat
   QC.Met:
     repos:
       github.com/rciam/rciam-federation-registry validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-green-wrasse.sh
-        container: qc.met_shaggy-scarlet-frigatebird
+        - /usr/bin/env sh .sqa/script.chewy-ruby-anteater.sh
+        container: qc.met_leaky-lime-dingo
   QC.Sty:
     repos:
       github.com/rciam/rciam-federation-registry jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-malachite-dollar.sh
-        container: qc.sty_greasy-ecru-leopard
+        - /usr/bin/env sh .sqa/script.seedy-tomato-quokka.sh
+        container: qc.sty_cheeky-lavender-wolfhound
   QC.Ver:
     repos:
       github.com/rciam/rciam-federation-registry get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-red-tang.sh
-        container: qc.ver_wheezy-apricot-cheetah
+        - /usr/bin/env sh .sqa/script.stuffy-bistre-chin.sh
+        container: qc.ver_shaggy-teal-dormouse
 timeout: 5400
