@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/rciam/rciam-federation-registry &&
-    git rev-parse --is-inside-work-tree 
+cd github.com/rciam/rciam-federation-registry-docs &&
+    mdl --json  .
 )
