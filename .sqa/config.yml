@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.clementine_thoughtful_buffalo.sh
-        container: qc.acc_reef_diligent_hawk
+        - /usr/bin/env sh .sqa/script.green_skeptical_reindeer.sh
+        container: qc.acc_cardamom_grateful_elk
   QC.Doc:
     repos:
       github.com/rciam/rciam-federation-registry find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lagoon_creative_kangaroo.sh
-        container: qc.doc_cinnabar_careful_grizzly
+        - /usr/bin/env sh .sqa/script.wheat_confident_pelican.sh
+        container: qc.doc_powder_friendly_hedgehog
       github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.jet_vibrant_gnu.sh
-        container: qc.doc_chartreuse_bubbly_serval
+        - /usr/bin/env sh .sqa/script.cerise_elated_hornbill.sh
+        container: qc.doc_pineapple_content_gorilla
       github.com/rciam/rciam-federation-registry markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cardamom_cautious_bear.sh
-        container: qc.doc_purple_daring_manatee
+        - /usr/bin/env sh .sqa/script.fern_impulsive_clownfish.sh
+        container: qc.doc_verdant_amused_nymph
   QC.Lic:
     repos:
       github.com/rciam/rciam-federation-registry licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.chocolate_witty_leopard.sh
-        container: qc.lic_reef_tactful_pegasus
+        - /usr/bin/env sh .sqa/script.glacier_patient_swan.sh
+        container: qc.lic_wisteria_realistic_marmoset
   QC.Met:
     repos:
       github.com/rciam/rciam-federation-registry validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.grape_serene_koala.sh
-        container: qc.met_apricot_eager_koala
+        - /usr/bin/env sh .sqa/script.rose_dramatic_hawk.sh
+        container: qc.met_emerald_rational_griffin
   QC.Sty:
     repos:
       github.com/rciam/rciam-federation-registry jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.storm_stubborn_ocelot.sh
-        container: qc.sty_persimmon_shrewd_boar
+        - /usr/bin/env sh .sqa/script.tide_vibrant_roadrunner.sh
+        container: qc.sty_sepia_fair_porcupine
   QC.Ver:
     repos:
       github.com/rciam/rciam-federation-registry get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.thistle_wise_boar.sh
-        container: qc.ver_iris_tactful_grizzly
+        - /usr/bin/env sh .sqa/script.walnut_optimistic_kingfisher.sh
+        container: qc.ver_cream_happy_axolotl
 timeout: 5400
