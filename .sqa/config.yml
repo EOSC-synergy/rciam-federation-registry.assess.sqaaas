@@ -2,14 +2,11 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: main
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/rciam/rciam-federation-registry:
       branch: master
       repo: https://github.com/rciam/rciam-federation-registry
-    github.com/rciam/rciam-federation-registry-docs:
-      branch: master
-      repo: https://github.com/rciam/rciam-federation-registry-docs
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
@@ -18,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-olive-cuscus.sh
-        container: qc.acc_skinny-violet-quetzal
+        - /usr/bin/env sh .sqa/script.clementine_thoughtful_buffalo.sh
+        container: qc.acc_reef_diligent_hawk
   QC.Doc:
     repos:
-      github.com/rciam/rciam-federation-registry-docs find_doc_files.py:
+      github.com/rciam/rciam-federation-registry find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-alizarin-quetzal.sh
-        container: qc.doc_chummy-wisteria-dachsbracke
-      github.com/rciam/rciam-federation-registry-docs git:
+        - /usr/bin/env sh .sqa/script.lagoon_creative_kangaroo.sh
+        container: qc.doc_cinnabar_careful_grizzly
+      github.com/rciam/rciam-federation-registry git:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-violet-cassowary.sh
-        container: qc.doc_scaly-magnolia-dormouse
-      github.com/rciam/rciam-federation-registry-docs markdownlint:
+        - /usr/bin/env sh .sqa/script.jet_vibrant_gnu.sh
+        container: qc.doc_chartreuse_bubbly_serval
+      github.com/rciam/rciam-federation-registry markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-vermilion-mastiff.sh
-        container: qc.doc_sloppy-razzmatazz-eagle
+        - /usr/bin/env sh .sqa/script.cardamom_cautious_bear.sh
+        container: qc.doc_purple_daring_manatee
   QC.Lic:
     repos:
       github.com/rciam/rciam-federation-registry licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-thistle-centipede.sh
-        container: qc.lic_craggy-malachite-slug
+        - /usr/bin/env sh .sqa/script.chocolate_witty_leopard.sh
+        container: qc.lic_reef_tactful_pegasus
   QC.Met:
     repos:
       github.com/rciam/rciam-federation-registry validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-brass-foxhound.sh
-        container: qc.met_boozy-auburn-shrew
+        - /usr/bin/env sh .sqa/script.grape_serene_koala.sh
+        container: qc.met_apricot_eager_koala
   QC.Sty:
     repos:
       github.com/rciam/rciam-federation-registry jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-pear-gecko.sh
-        container: qc.sty_crappy-alizarin-ladybird
+        - /usr/bin/env sh .sqa/script.storm_stubborn_ocelot.sh
+        container: qc.sty_persimmon_shrewd_boar
   QC.Ver:
     repos:
       github.com/rciam/rciam-federation-registry get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-alizarin-lizard.sh
-        container: qc.ver_thirsty-cream-civet
+        - /usr/bin/env sh .sqa/script.thistle_wise_boar.sh
+        container: qc.ver_iris_tactful_grizzly
 timeout: 5400
